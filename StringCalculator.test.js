@@ -13,4 +13,10 @@ test("returns sum of 2 values", () => {
 	expect(StringCalculator("1","2")).toBe("3");
 });
 
+test("returns sum of 3 values", () => {
+	expect(StringCalculator("1","2","3")).toBe("6");
+});
 
+test("returns sum of 4 values", () => {
+	expect(StringCalculator("1","2","3","4")).toBe("10");
+});

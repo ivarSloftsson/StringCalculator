@@ -20,3 +20,7 @@ test("returns sum of 3 values", () => {
 test("returns sum of 4 values", () => {
 	expect(StringCalculator("1,2,3,4")).toBe("10");
 });
+
+test("Add method handles new lines between numbers", () => {
+	expect(StringCalculator("1\n2,3")).toBe("6");
+});

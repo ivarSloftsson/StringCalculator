@@ -28,3 +28,11 @@ test("Add method handles new lines between numbers", () => {
 test("Numbers bigger than 1000 should be ignored", () => {
 	expect(StringCalculator("1001, 2")).toBe("2");
 });
+
+test("Add method can handle ; as a delimiter", () => {
+	expect(StringCalculator("//;\n1;2")).toBe("3");
+});
+
+test("Add method can handle longer delimiters", () => {
+	expect(StringCalculator("//ta\n1ta2,3")).toBe("6");
+});

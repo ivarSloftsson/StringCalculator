@@ -36,3 +36,16 @@ test("Add method can handle ; as a delimiter", () => {
 test("Add method can handle longer delimiters", () => {
 	expect(StringCalculator("//ta\n1ta2,3")).toBe("6");
 });
+
+test("Testing multiple nevative values", function() {
+	expect(function() {
+		StringCalculator("-1,-2,-3");
+	}).toThrow("Negatives not allowed:-1,-2,-3");
+});
+
+test("Testing a single nevative values", function() {
+	expect(function() {
+		StringCalculator("1,-2,3");
+	}).toThrow("Negatives not allowed:-2");
+});
+

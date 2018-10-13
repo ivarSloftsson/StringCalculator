@@ -24,3 +24,7 @@ test("returns sum of 4 values", () => {
 test("Add method handles new lines between numbers", () => {
 	expect(StringCalculator("1\n2,3")).toBe("6");
 });
+
+test("Numbers bigger than 1000 should be ignored", () => {
+	expect(StringCalculator("1001, 2")).toBe("2");
+});
